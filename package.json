@@ -1,0 +1,25 @@
+{
+  "name": "task-management-system",
+  "version": "1.0.0",
+  "description": "Multi-Role Task Management System (MERN Stack)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "start": "npm start --prefix server",
+    "build:client": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test:security": "npm run test:security --prefix server",
+    "test:tasks": "npm run test:tasks --prefix server",
+    "test:notifications": "npm run test:notifications --prefix server",
+    "test:audit": "npm run test:audit --prefix server",
+    "test": "npm run test:security && npm run test:tasks && npm run test:notifications && npm run test:audit",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

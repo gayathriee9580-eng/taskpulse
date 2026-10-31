@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+*.log
+
+# Allow safe environment template
+!.env.example
